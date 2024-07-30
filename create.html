@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(to right,black,#3533cd);
+             display: flex;
+             align-items:center;
+            flex-direction:column;
+        }
+        .container-login {
+            padding: 10px;
+            max-width: 900px;
+            background-color: #3533cd;
+            color: white;
+            border-radius: 10px;
+            box-shadow:0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .left {
+            flex: 1;
+            background: url('2.png');
+            background-size: cover;
+        }
+        .right {
+            flex: 1;
+            padding: 40px;
+        }
+        .right h2 {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-input {
+            flex-grow: 1;
+            max-width: 200px;
+            border-radius: 0.25rem;
+        }
+        .search-button {
+            height: 38px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 0.25rem;
+            color: white;
+            margin-left: 8px;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark w-100">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="logo.png" width="100%" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+                <form class="search-container ml-auto">
+                    <input class="form-control me-2 search-input" type="text" placeholder="Search">
+                    <button class="btn search-button" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-login">
+        <div class="left">
+            <img src="1.png" alt="healthcare" class="img-fluid">
+        </div>
+        <div class="right">
+            <h2>Welcome</h2>
+            <p>Create your new account</p>
+            <form action="loggedin.html">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="name" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="number">Contact No:</label>
+                    <input type="number" class="form-control" id="number" placeholder="Eg.12345678">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="login" class="btn btn-primary">login</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
