@@ -13,7 +13,6 @@
                 background-image: linear-gradient(to right,black,#3533cd);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
             }
             body {  
                 height: 100%;
@@ -21,13 +20,20 @@
                 background-image: linear-gradient(to right,black,#3533cd);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
                 color: white;
             }
             .head {
                 background-image: linear-gradient(to right,black,#3533cd);
                 color: white;
                 text-align: center;
+            }
+            .card {
+                background-color:rebeccapurple;
+                padding: 20px;
+                color: white;
+            }
+            .card > card-img-top {
+                margin: 10px;
             }
         </style>
     </head>
@@ -68,33 +74,68 @@
                     </div>
                 </div>
         </nav>
-
-        <div id="paypal-button-container"></div>
-        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
-        <script>
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'buynow',
-                
-            },
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '1'
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render('#paypal-button-container');
-        </script>
+        <div class="container">
+            <div class="banner">
+              <br>
+              <div class="text-center"><h1>Products</h1></div>
+              <br>
+            </div>
+            <div class="container mt-4">
+              <h1>Shop</h1>
+                <div class="row">
+                  <p>Look through our various products and see which you like</p>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="pro1.png" class="card-img-top" alt="" style="max-height: 300px; object-fit: cover;">
+                            <div class="card-body">
+                            <h5 class="card-title">personalised metal business card</h5>
+                            <p class="card-text">price: $128.90</p>
+                            <a href="product1.html" class="btn btn-primary">view product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="pro2.png" class="card-img-top" alt="" style="max-height: 300px; object-fit:scale-down;">
+                            <div class="card-body">
+                            <h5 class="card-title">personalised transparent business card</h5>
+                            <p class="card-text">price: $25.80</p>
+                            <a href="product2.html" class="btn btn-primary">view product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="pro3.png" class="card-img-top" alt="" style="max-height: 300px; object-fit: cover;">
+                            <div class="card-body">
+                            <h5 class="card-title">personalised wooden business card</h5>
+                            <p class="card-text">price: $32.90</p>
+                            <a href="product3.html" class="btn btn-primary">view product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="pro4.png" class="card-img-top" alt="" style="max-height: 300px; object-fit: cover;">
+                            <div class="card-body">
+                            <h5 class="card-title">personalised regular plastic business card</h5>
+                            <p class="card-text">price: $12.60</p>
+                            <a href="product4.html" class="btn btn-primary">view product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="digi.webp" class="card-img-top" alt="" style="max-height: 270px; object-fit: cover;">
+                            <div class="card-body">
+                            <h5 class="card-title">personalised digital business card</h5>
+                            <p class="card-text">price: Free</p>
+                            <a href="product5.html" class="btn btn-primary">view product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
     </body>
 </html>

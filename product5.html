@@ -13,7 +13,6 @@
                 background-image: linear-gradient(to right,black,#3533cd);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
             }
             body {  
                 height: 100%;
@@ -21,13 +20,15 @@
                 background-image: linear-gradient(to right,black,#3533cd);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
                 color: white;
             }
             .head {
                 background-image: linear-gradient(to right,black,#3533cd);
                 color: white;
                 text-align: center;
+            }
+            .back {
+                padding-left: 130px;
             }
         </style>
     </head>
@@ -68,11 +69,51 @@
                     </div>
                 </div>
         </nav>
-
-        <div class="head">
-            <header>
-                <h1>Welcome back Amanda clinics! </h1>
-            </header>
+        <div class="container">
+            <br>
+            <div class="text-center"><h2>Product Details</h2></div>
+            <br>
+                <div>
+                    <p><b>Product Name:</b><br>personalised metal business card</p>
+                    <p><b>Product Quantity:</b><br> 
+                        <form>
+                            <label for="quantity"></label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="99999">
+                          </form></p>
+                    <p><b>Price:</b><br>free</p> 
+                    <p><b>Product Image:</b><br> <img src = "digi.webp" width="50%"></p>
+                </div>
+                <div id="paypal-button-container"></div>
+                <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+                <script>
+                paypal.Buttons({
+                    style: {
+                        shape: 'rect',
+                        color: 'gold',
+                        layout: 'vertical',
+                        label: 'buynow',
+                        
+                    },
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '1'
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                        });
+                    }
+                }).render('#paypal-button-container');
+                </script>
+              </div><br><br><br><br><br><br><br>
+            <a href ="order.html" class="back">Back</a>
+            <br><br><br>
         </div>
+
     </body>
 </html>
