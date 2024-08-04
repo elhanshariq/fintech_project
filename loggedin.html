@@ -10,23 +10,47 @@
             html {
                 height: 100%;
                 background-color:#3533cd ; /* For browsers that do not support gradients */
-                background-image: linear-gradient(to right,black,#3533cd);
+                background-image: url(backing.png);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
             }
             body {  
                 height: 100%;
                 background-color:#3533cd ; /* For browsers that do not support gradients */
-                background-image: linear-gradient(to right,black,#3533cd);
+                background-image: url(backing.png);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
                 color: white;
             }
             .head {
-                background-image: linear-gradient(to right,black,#3533cd);
                 color: white;
+                text-align: center;
+            }
+
+            .cad {
+                padding-left: 120px;
+            }
+            img {
+              width: 100%;
+              margin-bottom: 15px;
+            }
+            .article-box {
+              border: 2px solid #3533cd;
+              padding: 15px;
+              border-radius: 8px;
+              margin-bottom: 20px;
+              height: 100%; /* Ensure equal height */
+              text-align: center; /* Center text horizontally */
+              background-color:#333333;
+            }
+            .article-box h2 {
+              font-size: 1.8rem; /* Increase heading font size */
+              margin-bottom: 10px; /* Space below heading */
+            }
+            .article-box p {
+              font-size: 1.2rem; /* Increase paragraph font size */
+            }
+            .cen {
                 text-align: center;
             }
         </style>
@@ -74,8 +98,42 @@
                 <h1>Welcome back BeforeSurprised! </h1>
             </header>
         </div>
-        <div>
-            
+        <br><br>
+        <div class="cad">
+            <h4>Your Cards</h4>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <article class="article-box">
+                  <h2>Personalised Metal Card</h2>
+                  <img
+                    src="2.png"
+                    width="100px"/>
+                  <p>
+                    Used for personal use to introduce self highly to others
+                  </p>
+                </article>
+              </div>
+              <div class="col-lg-4">
+                <article class="article-box">
+                  <h2>Plastic Business Plastic Card</h2>
+                  <img
+                    src="1.png" width="100px" height="210px"
+                  />
+                  <p>Made to be handed out to customers to encourage them to come back and collect points</p>
+                </article>
+              </div>
+              <div class="col-lg-4">
+                <article class="article-box">
+                  <h2>Transparent Business Card</h2>
+                  <img src="trans2.png"
+                   width="300px" height="210px">
+                    <p>The card is issued to staff members to access the staff room and storage areas.</p>
+                </article>
+              </div>
+            </div>
         </div>
     </body>
 </html>

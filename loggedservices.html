@@ -29,6 +29,32 @@
                 color: white;
                 text-align: center;
             }
+            .card {
+                background-color: whitesmoke;
+            }
+            img {
+              width: 100%;
+              margin-bottom: 15px;
+            }
+            .article-box {
+              border: 2px solid #3533cd;
+              padding: 15px;
+              border-radius: 8px;
+              margin-bottom: 20px;
+              height: 100%; /* Ensure equal height */
+              text-align: center; /* Center text horizontally */
+              background-color: navy;
+            }
+            .article-box h2 {
+              font-size: 1.8rem; /* Increase heading font size */
+              margin-bottom: 10px; /* Space below heading */
+            }
+            .article-box p {
+              font-size: 1.2rem; /* Increase paragraph font size */
+            }
+            .cen {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -69,9 +95,31 @@
                 </div>
         </nav>
         <div>
-            <header>
-                
-            </header>
+            <div class="container mt-4">
+                <h1>Services</h1>
+                  <div class="row">
+                    <p>Here we have our services that we assist for free if you buy any of our cards.</p>
+                      <div class="col-md-4 mb-3">
+                          <div class="card">
+                              <img src="cash.png" class="card-img-top" alt="" style="max-height: 525px; object-fit: cover;">
+                              <div class="card-body">
+                              <h5 class="card-title">CashBlock system</h5>
+                              <a href="history.html" class="btn btn-primary">view service</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                          <div class="card">
+                              <img src="block.png" class="card-img-top" alt="" style="max-height: 405px; object-fit:scale-down;">
+                              <div class="card-body">
+                              <h5 class="card-title">Blockchain System</h5>
+                              <p class="card-text"></p>
+                              <a href="history.html" class="btn btn-primary">view service</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
         </div>
     </body>
 </html>
